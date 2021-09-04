@@ -1,0 +1,23 @@
+<h1>cities list</h1>
+<table class="table">
+    <tr>
+        <th>City name</th>
+        <th>City Code</th>
+        <th>Action</th>
+    </tr>
+    {{#cities }}
+    <tr>
+        <td>{{ city_name }}</td>
+        <td>{{ city_code }}</td>
+        <td>
+            <a href="{{ link }}"><i class="fa fa-edit"></i></a>
+            <a href="javascript:void(0)" onclick="getDelCityConfirm({{ id }})"><i class="fa fa-trash"></i></a>
+        </td>
+    </tr>
+    {{/cities }}
+    {{^cities }}
+        <tr>
+            <td colspan="3">No records found</td>
+        </tr>
+    {{/cities }}
+</table>
