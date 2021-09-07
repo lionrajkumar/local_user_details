@@ -19,7 +19,7 @@
                 <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true"/>
                 <FIELD NAME="employee_code" TYPE="char" LENGTH="50" NOTNULL="false" SEQUENCE="false"/>
                 <FIELD NAME="employee_name" TYPE="char" LENGTH="75" NOTNULL="false" SEQUENCE="false"/>
-                <FIELD NAME="doj" TYPE="datetime" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="doj" TYPE="int" LENGTH="11" NOTNULL="false" SEQUENCE="false"/>
                 <FIELD NAME="address" TYPE="char" NOTNULL="false" SEQUENCE="false" LENGTH="100"/>
                 <FIELD NAME="city" SEQUENCE="false" TYPE="int" NOTNULL="false" LENGTH="10" />
                 <FIELD NAME="zip" SEQUENCE="false" TYPE="char" NOTNULL="false" LENGTH="50" />

@@ -10,4 +10,9 @@ class renderer extends plugin_renderer_base
 
         return parent::render_from_template('local_user_details/cities_list', $data);
     }
+    public function render_users_list($page) {
+        $data = $page->export_for_template($this);
+
+        return parent::render_from_template('local_user_details/users_list', $data);
+    }
 }

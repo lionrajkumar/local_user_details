@@ -1,0 +1,30 @@
+<h1>User's list</h1>
+<table class="table">
+    <tr>
+        <th>Employee code</th>
+        <th>Employee Name</th>
+        <th>Doj</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>zip-code</th>
+    </tr>
+    {{#users }}
+        <tr>
+            <td>{{ employee_code }}</td>
+            <td>{{ employee_name }}</td>
+            <td>{{ doj }}</td>
+            <td>{{ address }}</td>
+            <td>{{ city_name }}</td>
+            <td>{{ zip }}</td>
+            <td>
+                <a href="{{ link }}"><i class="fa fa-edit"></i></a>
+                <a href="javascript:void(0)" onclick="getDelUserConfirm({{ id }})"><i class="fa fa-trash"></i></a>
+            </td>
+        </tr>
+    {{/users }}
+    {{^users }}
+        <tr>
+            <td colspan="7">No records found</td>
+        </tr>
+    {{/users }}
+</table>

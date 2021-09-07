@@ -4,6 +4,10 @@ require_once('lib.php');
 
 require_login();
 $systemcontext = context_system::instance();
+if (!has_capability('local/local_user_details:manageCity', $systemcontext)) {
+    throw new required_capability_exception($systemcontext, 'local/local_user_details:manageCity', 'nopermissions', 'local_user_details');
+}
+
 $linkurl = new moodle_url('/local/user_details/cities.php');
 $PAGE->set_context($systemcontext);
 $PAGE->set_url($linkurl);
